@@ -45,7 +45,6 @@ setup(
         "Development Status :: 4 - Beta",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3 :: Only",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
@@ -65,14 +64,14 @@ setup(
         "azure-core>=1.24.0",
         "typing-extensions>=4.0.1",
     ],
-    python_requires=">=3.7",
+    python_requires=">=3.8",
 )
 '''
 
 README_TEMPLATE = '''# Azure {service_title} {specific_title} client library for Python
 
 This is the Microsoft Azure {service_title} {specific_title} Client Library.
-This package has been tested with Python 3.7+.
+This package has been tested with Python 3.8+.
 
 For a more complete view of Azure libraries, see the [azure-sdk-for-python repository](https://github.com/Azure/azure-sdk-for-python).
 
@@ -80,7 +79,7 @@ For a more complete view of Azure libraries, see the [azure-sdk-for-python repos
 
 ### Prerequisites
 
-- Python 3.7 or later is required to use this package.
+- Python 3.8 or later is required to use this package.
 - You must have an [Azure subscription](https://azure.microsoft.com/free/) and an Azure {service_title} resource to use this package.
 
 ### Install the package
@@ -416,16 +415,16 @@ def create_package_structure(
     }
     
     if dry_run:
-        print(f"\\n{'='*80}")
+        print(f"\\n{'='*SEPARATOR_LENGTH}")
         print(f"DRY RUN - Would create package: {package_name}")
-        print(f"{'='*80}\\n")
+        print(f"{'='*SEPARATOR_LENGTH}\\n")
         print("Directories to create:")
         for directory in directories:
             print(f"  📁 {directory.relative_to(repo_root)}")
         print("\\nFiles to create:")
         for file_path in files.keys():
             print(f"  📄 {file_path.relative_to(repo_root)}")
-        print(f"\\n{'='*80}")
+        print(f"\\n{'='*SEPARATOR_LENGTH}")
         return
     
     # Create directories
@@ -440,9 +439,9 @@ def create_package_structure(
             f.write(content)
         print(f"✓ Created file: {file_path.relative_to(repo_root)}")
     
-    print(f"\\n{'='*80}")
+    print(f"\\n{'='*SEPARATOR_LENGTH}")
     print(f"✓ Package structure created successfully!")
-    print(f"{'='*80}")
+    print(f"{'='*SEPARATOR_LENGTH}")
     print(f"\\nPackage location: {package_dir.relative_to(repo_root)}")
     print(f"\\nNext steps:")
     print(f"  1. Review and customize the generated files")

@@ -38,7 +38,7 @@ Examples:
 
 ```bash
 # Navigate to the SDK directory
-cd /home/runner/work/azure-sdk-for-python/azure-sdk-for-python/sdk
+cd /path/to/azure-sdk-for-python/sdk
 
 # Create a new service directory (if it doesn't exist)
 mkdir <service-name>
