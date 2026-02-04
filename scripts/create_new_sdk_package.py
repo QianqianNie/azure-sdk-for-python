@@ -19,6 +19,9 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
+# Constants
+SEPARATOR_LENGTH = 80
+
 
 SETUP_PY_TEMPLATE = '''"""
 Setup configuration for {package_name}
