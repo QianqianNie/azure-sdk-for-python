@@ -68,6 +68,13 @@ Security issues and bugs should be reported privately, via email, to the Microso
 
 For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-python/blob/main/CONTRIBUTING.md).
 
+### Creating a New SDK Package or Repository
+
+If you're looking to create a new Azure SDK package or repository, we provide comprehensive guides and tools:
+
+- **[Repository Creation Guide](doc/dev/create_new_repository.md)** - Complete guide for creating new repositories or SDK packages
+- **[Automation Script](scripts/REPOSITORY_CREATION.md)** - Helper script to automatically generate package structure
+
 This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit
 https://cla.microsoft.com.
 
